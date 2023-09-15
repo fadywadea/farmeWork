@@ -20,6 +20,12 @@
   padding: 5px 0px;
   font-weight: 700;
 }
+
+/* todo: active link issue*/
+.navbar .container ul li a:active {
+  background-color: var(--main-color);
+}
+
 /* END NAVBAR*/
 
 /* START FOOTER*/
@@ -67,7 +73,7 @@ img {
   width: 250px;
 }
 
-.line{
+.line {
   height: 4px;
   width: 80px;
   background-color: white;
@@ -75,10 +81,10 @@ img {
 /* END HOME*/
 
 /* START ABOUT*/
-.bg-about{
+.bg-about {
   background-color: var(--main-color);
   margin-top: 92px;
   min-height: calc(100vh - 112px);
 }
 
-/* END HOME*/
+/* END ABOUT*/
