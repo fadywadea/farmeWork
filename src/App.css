@@ -1,38 +1,84 @@
-.App {
+:root {
+  --main-color: #1abc9c;
+  --second-color: #2c3e50;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* START NAVBAR*/
+.bg-navbar {
+  background-color: var(--second-color);
+  padding: 24px 0px;
+}
+
+.name-site {
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0px 16px 0px 0px;
+  padding: 5px 0px;
+  font-weight: 700;
+}
+/* END NAVBAR*/
+
+/* START FOOTER*/
+.footer {
+  background-color: var(--second-color);
+  color: white;
+  justify-content: center;
   text-align: center;
+  padding: 40px;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-body {
+  background-color: var(--second-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.end {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  background-color: #1a252f;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.end p {
+  padding-top: 10px;
+}
+/* END FOOTER*/
+
+/* START HOME*/
+.home {
+  background-color: var(--main-color);
+  margin-top: 92px;
+  min-height: calc(100vh - 112px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  width: 250px;
 }
+
+.line{
+  height: 4px;
+  width: 80px;
+  background-color: white;
+}
+/* END HOME*/
+
+/* START ABOUT*/
+.bg-about{
+  background-color: var(--main-color);
+  margin-top: 92px;
+  min-height: calc(100vh - 112px);
+}
+
+/* END HOME*/
