@@ -1,30 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
+// import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 export default function Navbar() {
-  // todo : scroll navbar issue >> let navBar = document. getElementsByClassName("navbar");
-  // todo : scroll navbar issue >> navBar.addEventListener("scroll", () =>
-  // todo : scroll navbar issue >> navBar.classList.replace("p-4", "p-3")
-  // todo : scroll navbar issue >> );
 
-  // ! : scroll navbar issue >> let navBar =document.querySelector("navbar")
-  // ! : scroll navbar issue >> function changePadding() {
-  // ! : scroll navbar issue >>   navBar.classList.replace("p-3", "p-4")
-  // ! : scroll navbar issue >> onScroll={changePadding}
-  // ! : scroll navbar issue >> }
+  // const [show, setShow] = useState(true);
+  // const controlNavbar = () => {
+  //   if (window.scrollY > 20) {
+  //     setShow(false);
+  //   } else {
+  //     setShow(true);
+  //   }
+  // }
 
-  // ? : scroll navbar issue >> let navBar = document.querySelector(".navbar");
-  // ? : scroll navbar issue >> function press() {
-  // ? : scroll navbar issue >>   navBar.addEventListener("scroll", () =>
-  // ? : scroll navbar issue >>     navBar.className.replace("p-3", "p-4"))
-  // ? : scroll navbar issue >> }
+  // useEffect(() => {
+  //   window.addEventListener('scroll', controlNavbar)
 
-  // todo: active link issue let navBar = document.querySelector(".navbar").querySelectorAll("a");
-  // todo: active link issue console.log(navBar);
+  //   return () => {
+  //     window.removeEventListener('scroll', controlNavbar)
+  //   }
+  // }, [])
+
 
   return <>
+    {/* <div className={`${show && Navbar}`}></div> */}
     <nav className="navbar navbar-expand-lg bg-navbar p-4 fixed-top">
       <div className="container">
         <Link className="navbar-brand text-white text-uppercase  fw-bolder fs-2 name-site" to="/">START FRAMEWORK</Link>
