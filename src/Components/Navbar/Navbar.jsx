@@ -1,32 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-// import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 export default function Navbar() {
 
-  // const [show, setShow] = useState(true);
-  // const controlNavbar = () => {
-  //   if (window.scrollY > 20) {
-  //     setShow(false);
-  //   } else {
-  //     setShow(true);
-  //   }
-  // }
+const [scrollbar, setScrollbar] =useState(false);
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', controlNavbar)
+const changePadding = () => { 
+  if (window.scrollY) {
+    setScrollbar(true);
+  } else {
+    setScrollbar(false);
+  }
+};
 
-  //   return () => {
-  //     window.removeEventListener('scroll', controlNavbar)
-  //   }
-  // }, [])
-
+window.addEventListener('scroll', changePadding);
 
   return <>
-    {/* <div className={`${show && Navbar}`}></div> */}
-    <nav className="navbar navbar-expand-lg bg-navbar p-4 fixed-top">
+    <nav className={scrollbar ? 'navbar navbar-expand-lg bg-navbar p-2 fixed-top' : 'navbar navbar-expand-lg bg-navbar p-4 fixed-top'}>
       <div className="container">
         <Link className="navbar-brand text-white text-uppercase  fw-bolder fs-2 name-site" to="/">START FRAMEWORK</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

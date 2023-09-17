@@ -11,6 +11,7 @@
 .bg-navbar {
   background-color: var(--second-color);
   padding: 24px 0px;
+  transition: .6s padding;
 }
 
 .name-site {
