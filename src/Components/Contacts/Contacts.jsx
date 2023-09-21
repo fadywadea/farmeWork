@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './Contacts.css'
 
 export default function Contacts() {
+
   const labelUser = document.getElementById('userName');
   const labelAge = document.getElementById('userAge');
   const labelEmail = document.getElementById('userEmail');
@@ -16,9 +17,10 @@ export default function Contacts() {
     } else {
       setLabelActive(false);
     }
-  }
+  };
 
-  window.addEventListener("input", labelACtivation)
+  window.addEventListener("input", labelACtivation);
+
   return <>
     <div className='mb-4'>
       <div className='contact  pt-4'>

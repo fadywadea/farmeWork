@@ -6,11 +6,3 @@
 * {
   scroll-behavior: smooth;
 }
-
-
-
-/* todo: active link issue*/
-.navbar .container ul li:active {
-  background-color: red;
-}
-
