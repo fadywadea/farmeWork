@@ -5,14 +5,14 @@ import img3 from '../../img/4.png'
 
 export default function Portfolio() {
   return <>
-    <div className='portfolio p-4'>
+    <div className='portfolio p-3'>
       <div className='mb-4'>
         <div>
           <div className='text-center pt-4' >
             <h2 className='text-uppercase mb-3 fs-1 fw-bolder'>portfolio component</h2>
             <div className='d-flex align-items-center justify-content-center mb-3'>
               <div className='lines me-3'></div>
-              <div className='fa-solid fa-star'></div>
+              <div className='fa-solid fa-star star'></div>
               <div className='lines ms-3'></div>
             </div>
           </div>

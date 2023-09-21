@@ -11,7 +11,7 @@
 .bg-navbar {
   background-color: var(--second-color);
   padding: 24px 0px;
-  transition: .6s padding;
+  transition: 0.6s padding;
 }
 
 .name-site {
@@ -23,8 +23,8 @@
 }
 
 /* todo: active link issue*/
-.navbar .container ul li a:active {
-  background-color: var(--main-color);
+.navbar .container ul li:active {
+  background-color: red;
 }
 
 /* END NAVBAR*/
@@ -98,10 +98,15 @@ img {
 .portfolio h2 {
   color: rgb(44, 62, 80);
 }
+
 .lines {
   height: 4px;
   width: 80px;
   background-color: rgb(44, 62, 80);
+}
+
+.star {
+  color: rgb(44, 62, 80);
 }
 
 .layer {
@@ -123,4 +128,47 @@ img {
   min-height: calc(100vh - 112px);
 }
 
+.contact h2 {
+  color: rgb(44, 62, 80);
+}
+
+.contact .__top {
+  top: 40px !important;
+}
+
+.contact .form-control:focus {
+  box-shadow: none;
+}
+
+.contact button {
+  background-color: #1abc9c;
+}
+
+.contact button:hover {
+  background-color: #1abc9c;
+}
+
+.contact .btn:focus-visible {
+  background-color: #1abc9c;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: #1abc9c;
+}
+
+@media screen and (max-width: 768px) {
+  .contact form {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 794px) {
+  .contact form {
+    width: 100% !important;
+  }
+}
 /* END PORTFOLIO*/
