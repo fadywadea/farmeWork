@@ -1,17 +1,17 @@
 import React from 'react'
-import './About.css'
+import Style from './About.module.css'
 
 export default function About() {
   return (
-    <div className='d-flex justify-content-center align-items-center text-white bg-about'>
+    <div className={`${Style.bgAbout} d-flex justify-content-center align-items-center text-white`}>
       <div>
         <div className='text-center pt-4'>
           <h3 className='text-uppercase mb-3 fs-1 fw-bolder'>About component</h3>
         </div>
         <div className='d-flex align-items-center justify-content-center text-center mb-3'>
-          <div className='line me-3'></div>
+          <div className={`${Style.line} me-3`}></div>
           <div className='fa-solid fa-star'></div>
-          <div className='line ms-3'></div>
+          <div className={`${Style.line} ms-3`}></div>
         </div>
         <div className='container'>
           <div className="row px-5">

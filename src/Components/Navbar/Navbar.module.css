@@ -3,16 +3,20 @@
   background-color: red;
 }
 
-.bg-navbar {
+.bg_navbar {
   background-color: var(--second-color);
   padding: 24px 0px;
   transition: 0.6s padding;
 }
 
-.name-site {
+.name_site {
   font-size: 32px;
   line-height: 48px;
   margin: 0px 16px 0px 0px;
   padding: 5px 0px;
   font-weight: 700;
+}
+
+* {
+  scroll-behavior: smooth;
 }

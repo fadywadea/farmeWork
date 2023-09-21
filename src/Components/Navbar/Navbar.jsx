@@ -2,23 +2,10 @@
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import Style from'./Navbar.module.css'
 
 
 export default function Navbar() {
-
-  // ! const [activeSection, setActiveSection] =useState(false);
-  // ? const activeSections = () => {
-  // ?   if (window) {
-  // ?     setActiveSection(true);
-  // ?   } else {
-  // ?     setActiveSection(false);
-  // ?   }
-  // ? };
-  // ? window.addEventListener('click', activeSections);
-  // todo: className={activeSection ? "nav-link text-white text-uppercase fw-bold mt-3 mt-md-0 px-2 rounded-3 active" : "nav-link text-white text-uppercase fw-bold mt-3 mt-md-0 px-2 rounded-3"}
-
-
   const [scrollbar, setScrollbar] = useState(false);
 
   const changePadding = () => {
@@ -31,9 +18,9 @@ export default function Navbar() {
   window.addEventListener('scroll', changePadding);
 
   return <>
-    <nav className={scrollbar ? 'navbar navbar-expand-lg bg-navbar p-2 fixed-top' : 'navbar navbar-expand-lg bg-navbar p-4 fixed-top'}>
+    <nav className={scrollbar ? `${Style.bg_navbar} navbar navbar-expand-lg p-2 fixed-top` : `${Style.bg_navbar} navbar navbar-expand-lg p-4 fixed-top`}>
       <div className="container">
-        <Link className="navbar-brand text-white text-uppercase  fw-bolder fs-2 name-site" to="/">START FRAMEWORK</Link>
+        <Link className={`${Style.name_site} navbar-brand text-white text-uppercase  fw-bolder fs-2 name-site`} to="/">START FRAMEWORK</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

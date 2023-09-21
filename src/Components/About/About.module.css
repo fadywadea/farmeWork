@@ -1,11 +1,7 @@
-.home {
+.bgAbout {
   background-color: var(--main-color);
   margin-top: 92px;
   min-height: calc(100vh - 112px);
-}
-
-img {
-  width: 250px;
 }
 
 .line {
