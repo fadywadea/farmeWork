@@ -1,0 +1,11 @@
+.bg-about {
+  background-color: var(--main-color);
+  margin-top: 92px;
+  min-height: calc(100vh - 112px);
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: white;
+}

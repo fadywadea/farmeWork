@@ -1,0 +1,31 @@
+.footer {
+  background-color: var(--second-color);
+  color: white;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  margin: 0px;
+}
+
+.card-body {
+  background-color: var(--second-color);
+}
+
+.icon {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #1a252f;
+  color: white;
+}
+
+.end p {
+  padding-top: 10px;
+}

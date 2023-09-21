@@ -2,6 +2,7 @@ import React from 'react'
 import img from '../../img/2.png'
 import img2 from '../../img/3.png'
 import img3 from '../../img/4.png'
+import './Portfolio.css'
 
 export default function Portfolio() {
   return <>

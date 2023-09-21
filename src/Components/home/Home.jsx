@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../../img/1.svg'
+import './Home.css'
 export default function Home() {
   return <>
     <div className='home d-flex justify-content-center align-items-center text-white'>

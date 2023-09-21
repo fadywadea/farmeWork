@@ -1,0 +1,29 @@
+.portfolio {
+  margin-top: 92px;
+  min-height: calc(100vh - 112px);
+}
+
+.portfolio h2 {
+  color: rgb(44, 62, 80);
+}
+
+.lines {
+  height: 4px;
+  width: 80px;
+  background-color: rgb(44, 62, 80);
+}
+
+.star {
+  color: rgb(44, 62, 80);
+}
+
+.layer {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+
+.layer:hover {
+  opacity: 1;
+}

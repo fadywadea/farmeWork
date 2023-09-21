@@ -1,10 +1,11 @@
 import React from 'react'
+import './Footer.css'
 
 export default function Footer() {
   return <>
     <div>
       <div className='footer'>
-        <div className='card-group   m-4'>
+        <div className='card-group m-4'>
           <div className='card border-0'>
             <div className='card-body text-white'>
               <h3 className=' text-uppercase' >location</h3>
