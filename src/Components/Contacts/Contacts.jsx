@@ -1,4 +1,5 @@
 /* eslint-disable eqeqeq */
+// import { useFormik } from 'formik'
 import React from 'react'
 import { useState } from 'react'
 
@@ -12,8 +13,8 @@ export default function Contacts() {
   const [labelActive, setLabelActive] = useState(false);
 
   const labelACtivation = () => {
-    if (inputUser == "" || inputAge == "" || inputEmail == "" || inputPassword == "") {
-      console.log(inputUser);
+    if (inputUser === null || inputAge === null || inputEmail === null || inputPassword === null) {
+      setLabelActive(true);
     } else {
       setLabelActive(false);
     }
@@ -34,24 +35,34 @@ export default function Contacts() {
           </div>
         </div>
 
-        <form className='w-50 p-3 mx-auto mt-5 ng-pristine ng-valid ng-touched'>
-
-          <label htmlFor="userName" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative top-0'}>userName :</label>
+        <form className='sla w-50 p-3 mx-auto mt-5 '>
+          <label htmlFor="userName" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'}>userName :</label>
           <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userName' name='userName' id='userName' type="text" />
 
-          <label htmlFor="userAge" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userAge :</label>
+          <label htmlFor="userAge" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userAge :</label>
           <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userAge' name='userAge' id='userAge' type="text" />
 
-          <label htmlFor="userEmail" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userEmail :</label>
+          <label htmlFor="userEmail" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userEmail :</label>
           <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userEmail' name='userEmail' id='userEmail' type="text" />
 
-          <label htmlFor="userPassword" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userPassword :</label>
+          <label htmlFor="userPassword" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userPassword :</label>
           <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userPassword' name='userPassword' id='userPassword' type="text" />
-
-          <button className="btn mt-4 text-white"> send Message </button>
+          <button type='submit' className="btn mt-4 text-white"> send Message </button>
         </form>
-
       </div>
     </div>
   </>
 }
+
+
+// let formik = useFormik({
+//   initialValues: {
+//     userName: '',
+//     userAge: '',
+//     userEmail: '',
+//     userPassword: '',
+//   },
+//   onSubmit: () => { console.log("hello"); }
+// })
+
+// onSubmit={formik.handleSubmit}

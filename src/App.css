@@ -19,7 +19,7 @@
 .colorLabel {
   color: #1abc9c;
   margin-bottom: 7px;
-  transition: .6s top;
+  transition: 0.6s top;
 }
 
 .contact .form-control:focus {
@@ -43,7 +43,7 @@
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  background-color: #1abc9c;
+  background-color: #1abc9c !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,7 +63,6 @@
   width: 80px;
   background-color: rgb(44, 62, 80);
 }
-
 
 .star {
   color: rgb(44, 62, 80);
