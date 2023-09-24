@@ -1,27 +1,49 @@
 /* eslint-disable eqeqeq */
-// import { useFormik } from 'formik'
+// import { Formik } from 'formik';
 import React from 'react'
 import { useState } from 'react'
 
 export default function Contacts() {
 
-  let inputUser = document.getElementById('userName');
-  let inputAge = document.getElementById('userAge');
-  let inputEmail = document.getElementById('userEmail');
-  let inputPassword = document.getElementById('userPassword');
 
-  const [labelActive, setLabelActive] = useState(false);
+  const [labelActive1, setLabelActive1] = useState(false);
+  const [labelActive2, setLabelActive2] = useState(false);
+  const [labelActive3, setLabelActive3] = useState(false);
+  const [labelActive4, setLabelActive4] = useState(false);
 
-  const labelACtivation = () => {
-    if (inputUser === null || inputAge === null || inputEmail === null || inputPassword === null) {
-      setLabelActive(true);
+  const userNameACtivation = (e) => {
+    // console.log(e.target.value);
+    if (e.target.value == "") {
+      setLabelActive1(false);
     } else {
-      setLabelActive(false);
+      setLabelActive1(true)
     }
   };
 
+  const userAgeActivation = (e) => {
+    if (e.target.value == "") {
+      setLabelActive2(false);
+    } else {
+      setLabelActive2(true)
+    }
+  };
 
-  window.addEventListener("input", labelACtivation);
+  const userEmailACtivation = (e) => {
+    if (e.target.value == "") {
+      setLabelActive3(false);
+    } else {
+      setLabelActive3(true)
+    }
+  };
+
+  const userPasswordACtivation = (e) => {
+    if (e.target.value == "") {
+      setLabelActive4(false);
+    } else {
+      setLabelActive4(true)
+    }
+  };
+
 
   return <>
     <div className='mb-4'>
@@ -35,34 +57,24 @@ export default function Contacts() {
           </div>
         </div>
 
-        <form className='sla w-50 p-3 mx-auto mt-5 '>
-          <label htmlFor="userName" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'}>userName :</label>
-          <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userName' name='userName' id='userName' type="text" />
+        <form className='w-50 p-3 mx-auto mt-5 ng-pristine ng-valid ng-touched'>
 
-          <label htmlFor="userAge" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userAge :</label>
-          <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userAge' name='userAge' id='userAge' type="text" />
+          <label htmlFor="userName" className={labelActive1 ? 'colorLabel position-relative top-0' : '__top position-relative top-0'}>userName :</label>
+          <input onInput={(e) => userNameACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userName' name='userName' id='userName' type="text" />
 
-          <label htmlFor="userEmail" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userEmail :</label>
-          <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userEmail' name='userEmail' id='userEmail' type="text" />
+          <label htmlFor="userAge" className={labelActive2 ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userAge :</label>
+          <input onInput={(e) => userAgeActivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userAge' name='userAge' id='userAge' type="text" />
 
-          <label htmlFor="userPassword" className={labelActive ? 'colorLabel position-relative top-0' : '__top position-relative'} >userPassword :</label>
-          <input className='form-control border-0 border-bottom py-3 position-relative' placeholder='userPassword' name='userPassword' id='userPassword' type="text" />
-          <button type='submit' className="btn mt-4 text-white"> send Message </button>
+          <label htmlFor="userEmail" className={labelActive3 ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userEmail :</label>
+          <input onInput={(e) => userEmailACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userEmail' name='userEmail' id='userEmail' type="text" />
+
+          <label htmlFor="userPassword" className={labelActive4 ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userPassword :</label>
+          <input onInput={(e) => userPasswordACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userPassword' name='userPassword' id='userPassword' type="text" />
+
+          <button className="btn mt-4 text-white"> send Message </button>
         </form>
+
       </div>
     </div>
   </>
 }
-
-
-// let formik = useFormik({
-//   initialValues: {
-//     userName: '',
-//     userAge: '',
-//     userEmail: '',
-//     userPassword: '',
-//   },
-//   onSubmit: () => { console.log("hello"); }
-// })
-
-// onSubmit={formik.handleSubmit}
