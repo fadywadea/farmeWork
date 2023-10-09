@@ -69,7 +69,7 @@ export default function Contacts() {
           <input onInput={(e) => userEmailACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userEmail' name='userEmail' id='userEmail' type="text" />
 
           <label htmlFor="userPassword" className={labelActive4 ? 'colorLabel position-relative top-0' : '__top position-relative top-0'} >userPassword :</label>
-          <input onInput={(e) => userPasswordACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userPassword' name='userPassword' id='userPassword' type="text" />
+          <input onInput={(e) => userPasswordACtivation(e)} className='form-control border-0 border-bottom py-3 position-relative' placeholder='userPassword' name='userPassword' id='userPassword' type="password" />
 
           <button className="btn mt-4 text-white"> send Message </button>
         </form>
