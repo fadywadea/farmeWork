@@ -1,7 +1,7 @@
 {
   "name": "app2",
   "version": "0.1.0",
-  "homepage": "https://fadywadea.github.io/simpleProject",
+  "homepage": "https://fadywadea.github.io/farmeWork",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
